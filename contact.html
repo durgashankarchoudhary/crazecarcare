@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!--Page Title-->
+  <title>Contact Us</title>
+
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css"> 
+
+</head>
+
+<body>
+  
+  <header>
+
+    <!--Creation of Header Container-->
+    <div class="header-container">
+
+      <!--Addition of Logo-->
+      <div class="logo">
+        <img src="logo.png" alt="Craze Car Care Logo">
+      </div>
+      
+      <!--Creation of Navigation Pages-->
+      <nav class="pages-list">
+
+        <!--List of Pages in the Website-->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+      </nav>
+
+      <!--Creation of Get Quote Button-->
+      <button id="quotebutton">Get Quote</button>
+
+      <!--Creation of Book Now Button-->
+      <button id="bookbutton">Book Now</button>
+
+    </div>
+
+  </header>
+  
+  <main>
+    <!-- Add your contact form content here -->
+    <form>
+      <label for="contactname">Name:</label>
+      <input type="text" id="contactname" name="contactname" required>
+      
+      <label for="contactemail">Email:</label>
+      <input type="email" id="contactemail" name="contactemail" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <div id="bookpopup-container">
+
+    <div id="bookpopup-form">
+      <h2 id="bookheading">Book Your Car Service</h2>
+
+      <form id="bookForm">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" inputmode="numeric" maxlength="10" pattern= "[0-9]{10}" required onblur="validateMobileNumber()" oninput="resetErrorShownAttribute()"><br><br>
+
+        <label for="carType">Car Type:</label>
+        <select id="carType" name="carType" required>
+          <option value="">Select Car Type</option>
+          <option value="Hatchback">Hatchback</option>
+          <option value="Sedan">Sedan</option>
+          <option value="SUV/Luxury">SUV/Luxury</option>
+        </select><br><br>
+
+        <label for="carService">Service:</label>
+        <select id="carService" name="carService1" required>
+          <option value="">Select Service</option>
+          <option value="Interior Cleaning">Interior Cleaning</option>
+          <option value="Paint Restoration">Paint Restoration</option>
+          <option value="Interior Cleaning + Paint Restoration">Interior Cleaning + Paint Restoration</option>
+        </select><br><br>
+
+        <label for="Amount">Amount:</label> 
+        <input type="text" readonly id="quoteResult" ><br><br>
+
+        <div id="afterquote" style = "display:none">
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="bookingDate">Date:</label>
+        <input type="date" id="bookingDate" name="bookingDate" required><br><br>
+        
+        <label for="bookingTime">Time:</label>
+        <select id="bookingTime" name="bookingTime" required>
+        </select><br><br>
+
+        <button type="submit">Book Now</button>
+
+        </div>
+
+        <button type="reset">Reset</button><br>
+
+      </form>
+
+      <button id="close-bookpopup">Close</button>
+
+    </div>
+
+  </div>
+  
+  <!--Adding Call Button-->
+  <div class="call-option">
+    <img src = "call.png" alt = "Call Now">
+  </div>
+
+  <!--Adding Whatsapp Button-->
+  <div class="whatsapp-option">
+    <img src = "Whatsapp.png" alt = "Whatsapp">
+  </div>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Craze Car Care Logo">
+      </div>
+      <div class="footer-info">
+        <h4>Craze Car Care</h4>
+        <p>MMD 1 / 372, LDA Colony, Kanpur Road, Lucknow, Uttar Pradesh 226012</p>
+        <p>Mob: 09628184000​ / 08004286210  / 09936880700</p>
+      </div>
+      <div class="footer-social">
+        <!-- Add your social media icons here -->
+        <!-- Example using Font Awesome icons -->
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <!-- Add more links as needed for your site map -->
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Craze Car Care. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Link the JavaScript file -->
+  <script src="script.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,556 @@
+/* Reset margin and padding for all elements */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+}
+
+/* Header Container Styles */
+.header-container {
+  background-color: #003366;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  height: 95%;
+  width: 17%;
+  max-width: 125px;
+  position: relative;
+  margin-left: 1%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Logo Image Styles */
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Pages List Styles */
+.pages-list {
+  flex: 1;
+  text-align: center;
+}
+
+/* Pages List Unordered List Styles */
+.pages-list ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pages List List Item Styles */
+.pages-list li {
+  margin-right: 5%;
+}
+
+/* Pages List List Item Styles */
+.pages-list li:last-child {
+  margin-right: 0;
+}
+
+/* Pages List Link Styles */
+.pages-list li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Hover effect for pages */
+.pages-list li a:hover {
+  color: #66CCFF;
+  font-weight: 400;
+}
+
+/* Hover effect for pages */
+.pages-list li a.active {
+  color: #00FF00;
+  font-weight: 500;
+}
+
+/* Keyframes for button background color alternation */
+@keyframes alternateBackground {
+  0%, 100% {
+    background-color: #FFA500;
+  }
+  50% {
+    background-color: #007bff;
+  }
+}
+
+/* Get Quote Button and Book Now Button Styles */
+#quotebutton,
+#bookbutton {
+  margin-right: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px 8px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  animation: alternateBackground .5s infinite;
+}
+
+/* Hover effect for buttons */
+#quotebutton:hover,
+#bookbutton:hover {
+  background-color: #0056b3 !important;
+}
+
+/* Header Responsive styles for smaller screens */
+@media screen and (max-width: 200px) {
+  .logo {
+    width: 100px;
+  }
+  .pages-list ul {
+    display: none;
+  }
+  .navigation-dropdown {
+    display: block;
+    text-align: center;
+    margin-right: 10px;
+  }
+  .navigation-dropdown select {
+    width: 100%;
+    padding: 5px;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .get-quote-button,
+  .book_now {
+    display: block;
+    margin-right: 5px;
+  }
+  .pages-list li {
+    display: none;
+  }
+  .pages-list li:first-child {
+    display: block;
+  }
+}
+
+/* Banner Styles */
+#banner {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+/* Banner Image Styles */
+#banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for Services Section */
+.services {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #c0ccd9;
+}
+
+/* Styles for the heading of Services Section */
+h2 {
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(to left, #8099b3, #003366);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Services Section Styles */
+.index-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Styles for individual Service Divs */
+.left-service,
+.right-service {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  flex-basis: 40%;
+}
+
+/* Styles for individual Service Divs */
+.left-service {
+  margin-right: 15px;
+}
+
+/* Styles for Service Headings */
+.left-service h3,
+.right-service h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #007bff;
+  background: linear-gradient(to left, #eeeeee, lightgrey);
+  padding: 5px;
+}
+
+/* Styles for Service Lists */
+.left-service ul,
+.right-service ul {
+  list-style: none;
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+/* Styles for Service List Items */
+.left-service li,
+.right-service li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/*Service Section Styles for Smaller Screens*/
+@media screen and (max-width: 500px) {
+  .left-service {
+    margin-right: 0px;
+  }
+  .index-services {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* CSS Styles for About Us Section */
+/* About Us Section Styles */
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: #c0ccd9;
+  padding: 15px;
+  padding-top: 0px;
+}
+
+/*Styles for about us Paragraphs*/
+.about-content {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* About Us Section Paragraph Styles */
+.about p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/*About Section Styles for Smaller Screens*/
+@media screen and (max-width: 500px) {
+  .about p {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+
+/* Testimonials Section Styles */
+#testimonials {
+  background-color: #c0ccd9;
+  padding: 15px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Styles for testimonials combined section*/
+.testimonials-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Blockquote Styles */
+blockquote {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  margin-right: 50px;
+}
+
+blockquote:last-child {
+  margin-right: 0px;
+}
+
+/* Blockquote Paragraph Styles */
+blockquote p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Blockquote Citation Styles */
+blockquote cite {
+  display: block;
+  text-align: right;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Styling the Quote Marks */
+blockquote p::before {
+  content: '\201C';
+  font-size: 25px;
+  color: #007bff;
+  position: relative;
+  line-height: 1;
+}
+
+/* Styling the Quote Marks */
+blockquote p::after {
+  content: '\201D';
+  font-size: 25px;
+  color: #007bff;
+  position: relative;
+  line-height: 1;
+}
+
+/* Responsive styles for Testimonials */
+@media screen and (max-width: 768px) {
+  .testimonials-block {
+    flex-direction: column;
+  }
+  blockquote {
+    margin-right: 0px;
+  }
+}
+
+/* Styles for Call and Whatsapp Buttons */
+.call-option, .whatsapp-option {
+  position: fixed;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.call-option img, .whatsapp-option img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Position for Call Button */
+.call-option {
+  left: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+/* Position for Whatsapp Button */
+.whatsapp-option {
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #003366;
+  color: #fff;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Footer Container Styles */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: top;
+  padding-bottom: 10px;
+}
+
+/* Footer Logo Image Styles */
+.footer-logo {
+  width: 125px;
+  Height: 80px;
+  overflow: hidden;
+}
+
+/* Footer Logo Image Styles */
+.footer-logo img {
+  width: 125px; 
+}
+
+/* Footer Info Styles */
+.footer-info {
+  flex-basis: 220px;
+}
+
+/* Footer Info Title Styles */
+.footer-info h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Footer Info Paragraph Styles */
+.footer-info p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Footer Social Links Styles */
+.footer-social a {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Footer Navigation Styles */
+.footer-nav ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Navigation List Item Styles */
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+/* Footer Navigation Link Styles */
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hover Styles for Footer Navigation Links */
+.footer-nav a:hover {
+  color: #007bff; 
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+  background-color: #222;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Footer Bottom Paragraph Styles */
+.footer-bottom p {
+  color: #ccc;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Styles for Popup Container */
+#bookpopup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+/* Styles for Popup Form */
+#bookpopup-form {
+  background-color: lightblue;
+  width: 85%;
+  max-width: 500px;
+  position: relative;
+  top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+/* Style for the form label */
+#bookpopup-form label {
+  display: inline-block;
+  width: 25%;
+  margin-bottom: 2px;
+}
+
+/* Style for the form input elements */
+#bookpopup-form input,
+#bookpopup-form select {
+  width: 65%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Center the form select element */
+#bookpopup-form select {
+  text-align: center;
+}
+
+/* Style for the form button elements */
+#bookpopup-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Close Button Style */
+#close-bookpopup {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive styles for pop up form */
+@media screen and (max-width: 600px) {
+  #bookpopup-form {
+    width: 90%;
+  }
+}
