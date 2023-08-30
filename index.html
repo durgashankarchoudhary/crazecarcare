@@ -190,7 +190,11 @@
   <div id="bookpopup-container">
 
     <div id="bookpopup-form">
-      <h2 id="bookheading">Book Your Car Service</h2>
+
+      <button id="close-bookpopup" class="close-button">✕</button>
+
+      <h2 id="bookheading" style = "display: none;">Book Your Car Service</h2>
+      <h2 id="quoteheading">Get Quote for the Service</h2>
 
       <form id="bookForm">
 
@@ -219,6 +223,8 @@
         <label for="Amount">Amount:</label> 
         <input type="text" readonly id="quoteResult" ><br><br>
 
+        <button id="bookservice" style = "display:none">Book Your Service</button>
+
         <div id="afterquote" style = "display:none">
 
         <label for="address">Address:</label>
@@ -235,11 +241,9 @@
 
         </div>
 
-        <button type="reset">Reset</button><br>
+        <button id = "resetform" type="reset">Reset</button><br>
 
       </form>
-
-      <button id="close-bookpopup">Close</button>
 
     </div>
 

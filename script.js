@@ -33,7 +33,15 @@ function openbookPopup() {
 function closebookPopup() {
   document.getElementById('afterquote').style.display = 'none';
   bookpopupContainer.style.display = 'none';
+
+  bookheading.style.display = "none";
+  quoteheading.style.display = "flex";
+
+  bookservice.style.display = "none";
+
+  document.getElementById('bookForm').reset();
 }
+
 
 // Event listener to open the popup
 document.getElementById('quotebutton').addEventListener('click', openbookPopup);
@@ -41,6 +49,9 @@ document.getElementById('quotebutton').addEventListener('click', openbookPopup);
 //funtion to execute on click of get quote
 function bookbuttonclick(){
   openbookPopup();
+
+  bookheading.style.display = "flex";
+  quoteheading.style.display = "none";
 
   document.getElementById('afterquote').style.display = 'block';
 }
@@ -65,7 +76,7 @@ function validateMobileNumber() {
   } else {
       mobileInput.removeAttribute("data-error-shown");
   }
- }
+}
 
 // function to stop continuously showing mobile number error
 function resetErrorShownAttribute() {
@@ -103,12 +114,24 @@ function calculateQuote() {
     const quotePrice = carServicePrices[carService][carType];
     quoteResult.value = quotePrice;
 
-    document.getElementById('afterquote').style.display = 'block';
+    document.getElementById('bookservice').style.display = 'block';
   } else {
     // If either name or mobile or carType or carService is not selected, reset the quoteResult1 value
     document.getElementById("quoteResult").value = "";
   }
 }
+
+function bookserviceclick () {
+  afterquote.style.display = 'block';
+
+  bookheading.style.display = "flex";
+  quoteheading.style.display = "none";
+  
+  bookservice.style.display = "none";
+}
+
+// Event Listener to book your service
+document.getElementById('bookservice').addEventListener('click', bookserviceclick);
 
 // Add an event listener to execute calculateQuote() if any of carType or carService is changed
 carType.addEventListener('change',calculateQuote)
@@ -166,6 +189,16 @@ function generateTimeSlots() {
 
 // Add an event listener to the date input to regenerate time slots if the date changes
 bookingDate.addEventListener('change', generateTimeSlots);
+
+// Function to execute on reset button
+function resetpopupform() {
+  document.getElementById('bookForm').reset(); // Reset the form
+  document.getElementById('bookservice').style.display = 'none'; // Hide the "Book Your Service" button
+}
+
+// Event listener to reset
+document.getElementById('resetform').addEventListener('click', resetpopupform);
+
 
 // Handle form submission for booking
 document.getElementById("bookForm").addEventListener("submit", function (event) {
